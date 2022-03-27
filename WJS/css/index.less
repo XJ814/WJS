@@ -1,0 +1,395 @@
+@themeColor:#e92322;
+/*头部*/
+.wjs_header{
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  > .container{
+    height: 100%;
+    > .row{
+      height: 100%;
+      > div{
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+        font-size:14px ;
+        &:nth-child(-n+3){
+          border-right: 1px solid #cccccc;
+        }
+        > .btn-danger{
+          background-color: @themeColor;
+          padding: 3px 16px;
+        }
+        > .btn-link{
+          color: black;
+        }
+      }
+      > .wjs_code{
+        > img{
+          display: none;
+          position: absolute;
+          top: 49px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 1px solid #cccccc;
+          border-top: none;
+          z-index: 1;
+        }
+        &:hover{
+          > img{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*导航*/
+.wjs_nav{
+  margin-bottom: 0;
+  .navbar-brand{
+    height: 80px;
+    line-height: 50px;
+    >.wjs_icon_logo{
+      color: @themeColor;
+      font-size: 40px;
+    }
+    >.wjs_icon_text{
+      font-size: 40px;
+      color: #333333;
+      margin-left: 5px;
+    }
+  }
+  .navbar-nav{
+    > li{
+      > a{
+        line-height: 50px;
+        &:hover ,&:focus{
+          border-bottom: 3px solid @themeColor;
+        }
+      }
+    }
+    .active{
+      >a,a:hover,a:focus{
+        color: #333333;
+        background-color: transparent;
+        border-bottom: 3px solid @themeColor;
+      }
+    }
+
+  }
+  .navbar-toggle{
+    margin-top: 23px;
+  }
+}
+
+/*轮播图*/
+.wjs_banner{
+  .pcImg{
+    display: block;
+    width: 100%;
+    height: 410px;
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+  .phoneImg{
+    display: block;
+    width: 100%;
+    >img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+/*信息*/
+.wjs_info{
+  .wjs_icon{
+    font-size: 30px;
+  }
+  .row{
+    div{
+      margin-top: 20px;
+      a:hover{
+        color: @themeColor;
+      }
+    }
+  }
+}
+
+/*预约*/
+.wjs_order{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  .row {
+    div{
+      a{
+        line-height: 60px;
+        &:hover{
+          color: @themeColor;
+        }
+      }
+      .wjs_order_now{
+        color: @themeColor;
+        border-bottom: 1px dashed @themeColor;
+      }
+      .wjs_icon {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/*产品*/
+.wjs_products{
+  background-color: #eee;
+  padding: 20px;
+  overflow: hidden;
+  #wjs_nav_parent{
+    .nav-tabs{
+      li{
+        margin-bottom: 0px;
+        padding: 10px 15px;
+        &:hover{
+          border-bottom: 3px solid red;
+        }
+        a{
+          border: 0;
+          border-radius: 0;
+          line-height: 30px;
+          &:hover{
+            border: 0;
+          }
+        }
+        &.active{
+          a,a:hover,a:focus{
+            background-color: #eeeeee;
+            border: 0px;
+          }
+          border-bottom: 3px solid red;
+        }
+      }
+    }
+  }
+
+  .tab-content{
+    .pBox{
+      margin-top: 20px;
+      position: relative;
+      height: 150px;
+      background-color: white;
+      >.pLeft{
+        height: 100%;
+        width: 100%;
+        padding-right: 100px;
+        overflow: hidden;
+        >.wjs_p_title{
+          font-size: 14px;
+          text-align: center;
+          margin-top: 10px;
+        }
+        >div{
+          >div{
+            >p{
+              font-size: 12px;
+            }
+            &:nth-of-type(odd){
+              >p{
+                padding-left: 5px;
+              }
+            }
+            &:nth-of-type(even){
+              >p{
+                text-align: right;
+                padding-right: 5px;
+              }
+            }
+          }
+        }
+      }
+      >.pRight{
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 30px;
+        text-align: center;
+        border-left: 1px dashed #cccccc;
+        >span{
+          font-size: 40px;
+          color: @themeColor;
+          font-weight: 700;
+        }
+        >sub{
+          font-size: 12px;
+          color: @themeColor;
+          bottom: 0;
+        }
+        &:after,&:before{
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #eeeeee;
+          position: absolute;
+          left: 0;
+        }
+        &:after{
+          top: -5px;
+          left: -5px;
+          box-shadow: 0px -1px 1px #eee inset;
+        }
+        &:before{
+          left: -5px;
+          box-shadow: 0px 1px 1px #eee inset;
+          bottom: -5px;
+        }
+        .wjs_tips{
+          position: absolute;
+          top: 20px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          >span:first-of-type{
+            border: 1px solid green;
+            color: green;
+          }
+          >span:last-of-type{
+            color: red;
+            border: 1px solid red;
+          }
+          >span{
+            cursor: pointer;
+          }
+        }
+      }
+      &.active{
+        background-color: @themeColor;
+        color: #eeeeee;
+        span,sub{
+          color: #eeeeee;
+        }
+        &:before{
+          content: "\e915";
+          position: absolute;
+          font-family:'wjs';
+          font-size: 30px;
+          top: -6px;
+        }
+      }
+    }
+  }
+}
+
+/*新闻*/
+.wjs_news{
+  padding: 20px;
+  .wjs_news_title{
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    position: relative;
+    &:after{
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 50%;
+      position: absolute;
+      right: -10px;
+      bottom: -5px;
+    }
+  }
+  .nav-tabs{
+    border-bottom: none;
+    position: relative;
+    >li{
+      margin-bottom: 60px;
+      &.active{
+        >a,a:hover,a:focus{
+          cursor: default;
+          background-color: @themeColor;
+          border: none;
+        }
+      }
+      >a{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: #cccccc;
+        &:hover{
+          border: none;
+          background-color: @themeColor;
+        }
+        >span{
+          color: white;
+          font-size: 30px;
+        }
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (max-width:992px) and (min-width:768px) {
+      >li{
+        margin: 20px 30px;
+      }
+    }
+    @media screen and (max-width:768px) {
+      >li{
+        margin: 20px 0px;
+        width: 25%;
+      }
+    }
+  }
+  .wjs_news_line_parent{
+    position: relative;
+  }
+  .wjs_news_line{
+    width: 1px;
+    height: 100%;
+    border-left: 1px dashed @themeColor;
+    position: absolute;
+    top: 0;
+    left: 45px;
+  }
+  .tab-content{
+    .wjs_news_list{
+      list-style: none;
+      >li{
+        line-height: 60px;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+      }
+    }
+  }
+}
+
+/*合作伙伴*/
+.wjs_partner{
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  .wjs_partner_title{
+    width: 100%;
+    text-align: center;
+  }
+  .wjs_partner_list{
+    list-style: none;
+    display: inline-block;
+    >li{
+      float: left;
+      margin-right: 20px;
+      &:last-of-type{
+        margin-right: 0px;
+      }
+      >.wjs_icon{
+        font-size: 80px;
+      }
+    }
+  }
+}
